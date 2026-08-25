@@ -1,0 +1,85 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body {
+  background: radial-gradient(ellipse at top, #0f1233 0%, #05060f 70%);
+  color:#fff; overflow-x:hidden; min-height:100vh;
+}
+#bg-canvas { position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; }
+
+nav { position:relative; z-index:10; display:flex; justify-content:space-between; align-items:center; padding:25px 60px; }
+.logo { font-weight:800; font-size:24px; letter-spacing:2px;
+  background: linear-gradient(90deg,#00f0ff,#a855f7);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+nav .links a { color:#ccc; text-decoration:none; margin-left:35px; font-size:14px; transition:.3s; }
+nav .links a:hover, nav .links a.active { color:#00f0ff; }
+
+.hero { position:relative; z-index:5; text-align:center; padding:60px 20px 20px; }
+.hero h1 { font-size:52px; font-weight:800; line-height:1.2;
+  background:linear-gradient(90deg,#fff,#00f0ff,#a855f7,#fff);
+  background-size:300%; -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  animation:shine 6s linear infinite; }
+@keyframes shine { to { background-position:300% center; } }
+.hero p { color:#9aa0c3; margin-top:15px; font-size:17px; }
+
+.ask-container { position:relative; z-index:10; max-width:700px; margin:50px auto;
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px); border-radius:20px; padding:12px;
+  box-shadow:0 0 40px rgba(0,240,255,0.15); display:flex; gap:10px; }
+#question { flex:1; background:transparent; border:none; outline:none; color:#fff; font-size:16px; padding:14px 20px; }
+#question::placeholder { color:#7f85a8; }
+#askBtn { background:linear-gradient(90deg,#00f0ff,#a855f7); border:none; border-radius:14px;
+  padding:14px 28px; color:#05060f; font-weight:600; cursor:pointer; transition:.3s; }
+#askBtn:hover { transform:scale(1.05); box-shadow:0 0 25px rgba(168,85,247,0.6); }
+
+.answer-box { position:relative; z-index:10; max-width:700px; margin:0 auto 60px;
+  background:rgba(255,255,255,0.06); border:1px solid rgba(0,240,255,0.2);
+  border-radius:20px; padding:0; opacity:0; transform:translateY(20px);
+  transition:all .5s ease; overflow:hidden; }
+.answer-box.show { opacity:1; transform:translateY(0); padding:28px; }
+.answer-box .tag { color:#00f0ff; font-size:12px; letter-spacing:2px; font-weight:600; }
+.answer-box p { margin-top:12px; font-size:16px; color:#e5e7ff; line-height:1.6; }
+
+.suggestions { position:relative; z-index:10; max-width:700px; margin:0 auto 80px;
+  display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.chip { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15);
+  padding:8px 16px; border-radius:20px; font-size:13px; cursor:pointer; color:#c8cdf0; transition:.3s; }
+.chip:hover { background:rgba(0,240,255,0.15); border-color:#00f0ff; color:#fff; }
+
+footer { text-align:center; padding:30px; color:#666; font-size:13px; position:relative; z-index:5; }
+
+@media(max-width:600px){
+  .hero h1{ font-size:32px; }
+  nav{ padding:20px; } nav .links a{ margin-left:15px; font-size:12px; }
+  .ask-container{ flex-direction:column; }
+}
+#micBtn {
+  background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2);
+  border-radius:14px; width:50px; cursor:pointer; color:#fff;
+  font-size:18px; transition:.3s; flex-shrink:0;
+}
+#micBtn:hover { border-color:#00f0ff; }
+#micBtn.listening {
+  background:#a855f7; animation:pulseMic 1s infinite;
+}
+@keyframes pulseMic {
+  0%,100% { box-shadow:0 0 0 0 rgba(168,85,247,0.6); }
+  50% { box-shadow:0 0 0 12px rgba(168,85,247,0); }
+}
+.content-section {
+  position:relative; z-index:10; max-width:800px; margin:40px auto 100px;
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px; padding:40px; backdrop-filter:blur(10px);
+}
+.content-section h2 { color:#00f0ff; margin-bottom:15px; }
+.content-section p { color:#c8cdf0; line-height:1.8; }
+
+form input, form textarea {
+  width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15);
+  border-radius:10px; padding:14px; color:#fff; margin-bottom:15px; outline:none;
+  font-size:14px; font-family:'Poppins',sans-serif; resize:none;
+}
+form input::placeholder, form textarea::placeholder { color:#7f85a8; }
+form button {
+  background:linear-gradient(90deg,#00f0ff,#a855f7); border:none; border-radius:10px;
+  padding:14px 30px; color:#05060f; font-weight:600; cursor:pointer; transition:.3s;
+}
+form button:hover { transform:scale(1.03); }

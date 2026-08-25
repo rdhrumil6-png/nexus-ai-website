@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS AI — Ask Anything</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav>
+  <div class="logo">DHRUMIL's AI SYSTEM</div>
+  <div class="links">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Ask. Discover. Understand.</h1>
+  <p>Your intelligent 3D assistant — powered by real AI</p>
+</section>
+
+<div class="ask-container">
+  <input type="text" id="question" placeholder="Ask me anything...">
+  <button id="micBtn" title="Speak your question">🎤</button>
+  <button id="askBtn">Ask</button>
+</div>
+
+<div class="answer-box" id="answerBox">
+  <div class="tag">NEXUS AI RESPONSE</div>
+  <p id="answerText"></p>
+</div>
+
+<div class="suggestions">
+  <div class="chip">What is 3D animation?</div>
+  <div class="chip">Explain black holes simply</div>
+  <div class="chip">Give me a fun fact</div>
+</div>
+
+<footer>© 2026 DHRUMIL's AI SYSTEM — Built with Three.js & imagination ✨</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

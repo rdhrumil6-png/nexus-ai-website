@@ -1,18 +1,1 @@
-{
-  "name": "nexus-ai",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1"
-  }
-}
+{"name":"devsphere-3d","version":"1.0.0","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start"},"dependencies":{"@react-three/drei":"10.7.6","@react-three/fiber":"9.3.0","@supabase/supabase-js":"2.57.4","framer-motion":"12.23.16","lucide-react":"0.468.0","next":"15.5.7","react":"19.1.1","react-dom":"19.1.1","three":"0.180.0"},"devDependencies":{"@types/node":"24.3.0","@types/react":"19.1.13","@types/react-dom":"19.1.9","typescript":"5.9.2"}}
